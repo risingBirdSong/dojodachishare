@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "DojoDachi";
+}
+@model SecondWeekCSharp.Models.dojoDachi_Instance
+
+<h1 class="text-center">DojoDachi</h1>
+
+<style>
+
+    .mytextclass {
+        font-size: 30px;
+    }
+</style>
+
+<div class="container text-center">
+    <div class="col mytextclass">
+
+        Fullness : @Model.Fullness
+        Happiness : @Model.Happiness
+        Meals : @Model.Meals
+        Energy : @Model.Energy
+    </div>
+    <div class="justify-content-center">
+        <img class="justify-content-md-center" src="~/img//dogodachi.jpg" alt="Alternate Text" />
+        
+    </div>
+    <p class="justify-content-center">@Model.Message</p>
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="control">
+                <a asp-controller="Home" asp-action="FeedMe">Feed With Me</a>
+            </div>
+
+            <div>
+                <a asp-controller="Home" asp-action="PlayMe">Play With Me</a>
+            </div>
+            <div>
+                <a asp-controller="Home" asp-action="WorkeMe">Work With Me</a>
+            </div>
+            <div>
+                <a asp-controller="Home" asp-action="SleepMe">Sleep With Me</a>
+            </div>
+
+            <div>
+                <a asp-controller="Home" asp-action="ResetMe">Reset With Me</a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+

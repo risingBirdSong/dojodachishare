@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "updateit";
+}
+@model SecondWeekCSharp.Models.Pseudo
+
+    <div class="text-center">
+        <h1>your info</h1>
+        <h2>password number : @Model.count</h2>
+        <p>
+            @Model.pseudopassword
+        </p>
+
+        <form asp-controller="Home" asp-action="updateit" method="post">
+            <input asp-for="count" type="hidden" name="name" value="@Model.count" />
+            <input type="hidden" name="myhiddencount" value="@Model.count" />
+            <input asp-for="pseudopassword" type="hidden" name="name" value="" />
+            <input type="submit" name="name" value="submitme" />
+        </form>
+
+    </div>
+
+
+
+
